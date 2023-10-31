@@ -1,13 +1,14 @@
 import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import "./pages/home/home.scss";
 import Home from "./pages/home/Home";
-import User from "./pages/users/Users";
+import User from "./pages/user/User";
 import Products from "./pages/products/Products";
 import { Navbar } from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import "./styles/global.scss";
+import Users from "./pages/users/Users";
 
 function App() {
   const Layout = () => {
@@ -38,6 +39,10 @@ function App() {
         {
           path: "/user",
           element: <User />,
+        },
+        {
+          path: "/users",
+          element: <Users />,
         },
         {
           path: "/products",
